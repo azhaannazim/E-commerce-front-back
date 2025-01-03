@@ -1,0 +1,3 @@
+[submodule "E-commerce-BackEnd"]
+	path = E-commerce-BackEnd
+	url = https://github.com/azhaannazim/E-commerce-BackEnd.git
