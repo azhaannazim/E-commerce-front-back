@@ -1,9 +1,11 @@
 const initialState = {
     isLoading: false,
-    errorMessage: null
+    errorMessage: null,
+    categoryLoader: false,
+    categoryError: null,
 }
 
-export const errorRreducer = (state = initialState ,action) => {
+export const errorReducer = (state = initialState ,action) => {
     switch (action.type) {
         case "IS_FETCHING":
             return{
@@ -16,6 +18,19 @@ export const errorRreducer = (state = initialState ,action) => {
             return{
                 ...state,
                 isLoading: false,
+                errorMessage: null,
+            }
+        case "CATEGORY_SUCCESS":
+            return{
+                ...state,
+                categoryLoader: false,
+                categoryError: null,
+            }
+        case "CATEGORY_LOADER":
+            return{
+                ...state,
+                categoryLoader: true,
+                categoryError: null,
                 errorMessage: null,
             }
 
