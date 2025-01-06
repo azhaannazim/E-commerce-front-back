@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FaShoppingCart } from "react-icons/fa";
-import ProductViewModal from "./ProductViewModal";
+import ProductViewModal from "../shared/ProductViewModal";
+import { TruncateText } from "../../utils/TruncateText";
 
 const ProductCard = (props) => {
     const { productId,productName,image,description
@@ -35,10 +36,10 @@ const ProductCard = (props) => {
                     ,quantity,price,discount,specialPrice
                 })
             }} className="test-lg font-semibold mb-2 cursor-pointer">
-                    {productName}
+                    {TruncateText(productName , 20)}
                 </h2>
                 <div className="min-h-20 max-h-20">
-                    <p className="text-gray-500 text-sm">{description}</p>
+                    <p className="text-gray-500 text-sm">{TruncateText(description)}</p>
                 </div>
 
                 <div className="flex item-center justify-between">
