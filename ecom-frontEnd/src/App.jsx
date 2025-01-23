@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import { Toaster } from 'react-hot-toast'
 import React from 'react'
 import Cart from './components/cart/Cart'
+import Login from './components/auth/Login'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/about' element={<About />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/login' element={<Login />}></Route>
         </Routes>
       </Router>
     </React.Fragment>
