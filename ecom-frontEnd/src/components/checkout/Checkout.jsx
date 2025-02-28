@@ -6,10 +6,10 @@ import { getUserAddresses } from '../../store/action';
 import toast from 'react-hot-toast';
 import Skeleton from '../shared/Skeleton';
 import ErrorPage from '../shared/ErrorPage';
-// import PaymentMethod from './PaymentMethod';
-// import OrderSummary from './OrderSummary';
-// import StripePayment from './StripePayment';
-// import PaypalPayment from './PaypalPayment';
+import PaymentMethod from './PaymentMethod';
+import OrderSummary from './OrderSummary';
+import StripePayment from './StripePayment';
+import PaypalPayment from './PaypalPayment';
 
 const Checkout = () => {
     const [activeStep, setActiveStep] = useState(0);
@@ -67,7 +67,7 @@ const Checkout = () => {
         ) : (
             <div className='mt-5'>
                 {activeStep === 0 && <AddressInfo address={address} />}
-                {/* {activeStep === 1 && <PaymentMethod />}
+                {activeStep === 1 && <PaymentMethod />}
                 {activeStep === 2 && <OrderSummary 
                                         totalPrice={totalPrice}
                                         cart={cart}
@@ -80,7 +80,7 @@ const Checkout = () => {
                         ) : (
                             <PaypalPayment /> 
                         )}
-                    </>} */}
+                    </>}
             </div>
         )}
         
