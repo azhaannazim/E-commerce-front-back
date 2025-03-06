@@ -16,10 +16,11 @@ const useProductFilter = () => {
         params.set("pageNumber" , currentPage - 1);
         
         const sortOrder = searchParams.get("sortby") || "asc";
+        const sortBy = searchParams.get("sortBy") || "price";
         const currentCategory = searchParams.get("category") || null;
         const currentKeyWord = searchParams.get("keyword") || null;
 
-        params.set('sortBy' , "price");
+        params.set('sortBy' , sortBy);
         params.set("sortOrder" , sortOrder);
 
         if(currentCategory){

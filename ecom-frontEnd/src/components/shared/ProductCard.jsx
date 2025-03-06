@@ -47,7 +47,7 @@ const ProductCard = (props) => {
                     </h2>
                     <div className="flex items-center gap-3 mb-2">
                         <span className="text-red-500 text-sm font-semibold bg-red-100 px-2 py-1 rounded-lg">
-                            {3} Returns
+                            {returns} Returns
                         </span>
                         <StarRating rating={4} />
                     </div>
