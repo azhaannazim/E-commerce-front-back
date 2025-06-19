@@ -29,7 +29,7 @@ const ProductCard = (props) => {
         <div className="border rounded-lg shadow-xl overflow-hidden transition-shadow duration-300">
             <div onClick={() => {
                 handleProductView({
-                    id: productId, productName, image, description, quantity, price, discount, specialPrice, rating, returns
+                    id: productId, productName, image, description, quantity, price, discount, specialPrice, averageRating, returns
                 });
             }} className="w-full overflow-hidden aspect-[3/2]">
                 <img className="w-full h-full cursor-pointer transition-transform duration-300 transform hover:scale-105"
@@ -40,7 +40,7 @@ const ProductCard = (props) => {
                 <div className="flex justify-between items-start mb-2">
                     <h2 onClick={() => {
                         handleProductView({
-                            id: productId, productName, image, description, quantity, price, discount, specialPrice, rating, returns
+                            id: productId, productName, image, description, quantity, price, discount, specialPrice, averageRating, returns
                         });
                     }} className="text-lg font-semibold cursor-pointer">
                         {TruncateText(productName, 20)}
@@ -82,7 +82,7 @@ const ProductCard = (props) => {
                     <button
                         disabled={!isAvailable || btnLoader}
                         onClick={() => addToCartHandler({
-                            productId, productName, image, description, quantity, price, discount, specialPrice, rating, returns
+                            productId, productName, image, description, quantity, price, discount, specialPrice, averageRating, returns
                         })}
                         className={`bg-blue-500 ${isAvailable ? "opacity-100 hover:bg-blue-600" : "opacity-70"}
                         text-white py-2 px-3 rounded-lg items-center transition-colors duration-300 flex w-36 justify-center`}>
