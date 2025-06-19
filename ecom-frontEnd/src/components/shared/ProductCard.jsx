@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import StarRating from "../shared/StarRating"; // Import the StarRating component
 
 const ProductCard = (props) => {
-    const { productId, productName, image, description, quantity, price, discount, specialPrice, rating, returns } = props;
+    const { productId, productName, image, description, quantity, price, discount, specialPrice, averageRating, returns } = props;
 
     const [openProductViewModal, setOpenProductViewModal] = useState(false);
     const [selectedViewProduct, setSelectedViewProduct] = useState("");
@@ -49,7 +49,7 @@ const ProductCard = (props) => {
                         <span className="text-red-500 text-sm font-semibold bg-red-100 px-2 py-1 rounded-lg">
                             {returns} Returns
                         </span>
-                        <StarRating rating={4} />
+                        <StarRating rating={averageRating} />
                     </div>
                 </div>
 

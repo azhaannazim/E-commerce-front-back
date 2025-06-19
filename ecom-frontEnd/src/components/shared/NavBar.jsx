@@ -16,10 +16,11 @@ const Navbar = () => {
     return (
         <div className="h-[70px] bg-custom-gradient text-white z-50 flex items-center sticky top-0">
             <div className="lg:px-14 sm:px-8 px-4 w-full flex justify-between">
-                <Link to="/" className="flex items-center text-2xl font-bold">
-                    <FaStore className="mr-2 text-3xl" />
-                    <span className="font-[Poppins]">E-Shop</span>
-                </Link>
+            <Link to="/" className="flex items-center text-2xl font-bold">
+                <FaStore className="mr-2 text-3xl" />
+                <span className="font-[Righteous]">CLOUD CART</span>
+            </Link>
+
 
             <ul className={`flex sm:gap-10 gap-4 sm:items-center  text-slate-800 sm:static absolute left-0 top-[70px] sm:shadow-none shadow-md ${
             navbarOpen ? "h-fit sm:pb-0 pb-5" : "h-0 overflow-hidden"

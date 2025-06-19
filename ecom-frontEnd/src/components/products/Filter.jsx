@@ -116,6 +116,7 @@ const Filter = ({ categories }) => {
                     >
                         <MenuItem value="price">Price</MenuItem>
                         <MenuItem value="returns">Returns</MenuItem>
+                        <MenuItem value="averageRating">Rating</MenuItem>
                     </Select>
                 </FormControl>
 
